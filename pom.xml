@@ -34,8 +34,10 @@
     <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
     <tomcat.version>9.0.43</tomcat.version>
     <jetty.version>10.0.1</jetty.version>
+    <undertow.version>2.2.4.Final</undertow.version>
     <arquillian-tomcat.version>1.2.0.Alpha1</arquillian-tomcat.version>
     <arquillian-jetty.version>1.0.0.CR3</arquillian-jetty.version>
+    <arquillian-undertow.version>1.0.0.Alpha2</arquillian-undertow.version>
     <jackson.version>2.12.1</jackson.version>
     <gson.version>2.8.6</gson.version>
     <skipTests>false</skipTests>
@@ -139,7 +141,26 @@
         <artifactId>tomcat-embed-jasper</artifactId>
         <version>${tomcat.version}</version>
       </dependency>
-      <!-- Arquillian Tomcat -->
+      <!--\ Arquillian Tomcat -->
+      <!-- Arquillian Undertow -->
+      <dependency>
+        <groupId>io.undertow</groupId>
+        <artifactId>undertow-core</artifactId>
+        <version>${undertow.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.undertow</groupId>
+        <artifactId>undertow-servlet</artifactId>
+        <version>${undertow.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.jboss.arquillian.container</groupId>
+        <artifactId>undertow-embedded</artifactId>
+        <version>${arquillian-undertow.version}</version>
+      </dependency>
+
+      <!--\ Arquillian Undertow -->
 
     </dependencies>
   </dependencyManagement>
