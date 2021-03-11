@@ -16,7 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
     <arquillian-bom.version>1.7.0.Alpha7</arquillian-bom.version>
-    <junit.version>4.13.2</junit.version>
+    <junit.version>5.7.1</junit.version>
     <jakarta.servlet.version>4.0.4</jakarta.servlet.version>
     <jakarta.jsp.version>2.3.6</jakarta.jsp.version>
     <jakarta.jstl.version>1.2.7</jakarta.jstl.version>
@@ -56,10 +56,9 @@
       <!--\ Arquillian -->
       <!-- Junit -->
       <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
-        <scope>test</scope>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>${junit.version}</version>
       </dependency>
       <!--\ Junit -->
       <!-- Jakarta Servlet -->
